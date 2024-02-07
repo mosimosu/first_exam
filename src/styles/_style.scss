@@ -1,12 +1,15 @@
 .landing-section {
   @include section;
   position: relative;
+  & > div {
+    overflow: hidden;
+  }
   &__background-img {
-    width: 150%;
+    width: 100%;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-position-x: center;
     @include mobile {
-      width: 100%;
+      width: 200%;
     }
   }
   &__textarea {
@@ -17,6 +20,9 @@
     position: absolute;
     z-index: 10;
     color: white;
+    @include mobile {
+      color: black;
+    }
 
     &-p {
       font-size: 1.5rem;
@@ -38,7 +44,7 @@
   @include section;
   margin-top: 3.5rem;
   &__photo {
-    text-align: center;
+    margin: 0 auto;
     margin-top: 2.5rem;
     & + div {
       margin-top: 1.25rem;
@@ -112,7 +118,8 @@
       width: 792px;
       height: 416px;
       @include mobile {
-        width: 588px;
+        width: 384px;
+        height: auto;
       }
     }
     & > div {
@@ -121,6 +128,12 @@
       gap: 1.5rem;
       @include mobile {
         flex-direction: column;
+      }
+      & > img {
+        @include mobile {
+          width: 384px;
+          height: auto;
+        }
       }
     }
   }
@@ -171,10 +184,20 @@
     & > li:nth-child(4) {
       grid-area: four;
       margin: 2rem auto;
+      & > img {
+        @include mobile {
+          width: 384px;
+        }
+      }
     }
     & > li:nth-child(5) {
       grid-area: five;
       margin: 2rem auto;
+      & > img {
+        @include mobile {
+          width: 384px;
+        }
+      }
     }
     & > li:nth-child(6) {
       grid-area: six;

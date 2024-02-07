@@ -1,0 +1,212 @@
+.landing-section {
+  @include section;
+  position: relative;
+  &__background-img {
+    width: 150%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include mobile {
+      width: 100%;
+    }
+  }
+  &__textarea {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    position: absolute;
+    z-index: 10;
+    color: white;
+
+    &-p {
+      font-size: 1.5rem;
+      @include roboto-black-italic;
+    }
+    &-title {
+      font-size: 5rem;
+      @include roboto-bold-italic;
+    }
+  }
+  &__plateform {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+}
+
+.about-section {
+  @include section;
+  margin-top: 3.5rem;
+  &__photo {
+    text-align: center;
+    margin-top: 2.5rem;
+    & + div {
+      margin-top: 1.25rem;
+    }
+  }
+  &__title {
+    text-align: center;
+    font-size: 4rem;
+    @include roboto-medium-italic;
+  }
+  &__p {
+    font-size: 1.5rem;
+    text-align: center;
+    @include roboto-bold-italic;
+  }
+  &__textarea {
+    margin-top: 1.25rem;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.75rem;
+    align-content: center;
+    justify-items: baseline;
+    align-items: baseline;
+  }
+}
+
+.dot {
+  width: 22px;
+  height: 22px;
+  background-color: #891818;
+  border-radius: 9999px;
+  margin: auto 1rem;
+}
+
+.intro-section {
+  @include section;
+  flex-direction: column;
+  margin-top: 3.5rem;
+  background-color: black;
+  color: white;
+  &__textarea {
+    margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @include roboto-medium-italic;
+    &-title {
+      font-size: 4rem;
+    }
+    &-subtitle {
+      margin-top: 0.75rem;
+      font-size: 1.5rem;
+      & ~ div {
+        margin-top: 2rem;
+      }
+    }
+    &-p {
+      font-size: 1.25rem;
+    }
+  }
+  &__images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4.25rem;
+    margin-bottom: 10rem;
+    & > img {
+      width: 792px;
+      height: 416px;
+      @include mobile {
+        width: 588px;
+      }
+    }
+    & > div {
+      display: flex;
+      margin-top: 2.5rem;
+      gap: 1.5rem;
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.works-section {
+  @include section;
+  flex-direction: column;
+  &__textarea {
+    margin-top: 3.5rem;
+    @include roboto-medium-italic;
+    text-align: center;
+    &-title {
+      font-size: 4rem;
+      & + p {
+        margin-top: 1.5rem;
+        & + p {
+          margin-bottom: 3.5rem;
+        }
+      }
+    }
+    &-p {
+      font-size: 1.25rem;
+    }
+  }
+  &__cards {
+    @include roboto-medium-italic;
+    display: grid;
+    grid-template-areas: "one one two two three three" "four four four five five five" "six six seven seven eight eight";
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.25rem;
+    text-align: center;
+    @include mobile {
+      grid-template-areas: "one" "two" "three" "four" "five" "six" "seven" "eight";
+    }
+
+    & > li:nth-child(1) {
+      grid-area: one;
+    }
+    & > li:nth-child(2) {
+      grid-area: two;
+    }
+    & > li:nth-child(3) {
+      grid-area: three;
+    }
+    & > li:nth-child(4) {
+      grid-area: four;
+      margin: 2rem auto;
+    }
+    & > li:nth-child(5) {
+      grid-area: five;
+      margin: 2rem auto;
+    }
+    & > li:nth-child(6) {
+      grid-area: six;
+    }
+    & > li:nth-child(7) {
+      grid-area: seven;
+    }
+    & > li:nth-child(8) {
+      grid-area: eight;
+    }
+  }
+}
+
+.contact-section {
+  @include section;
+  @include roboto-medium-italic;
+  background-color: black;
+  color: white;
+  margin-top: 9rem;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 4rem auto;
+  }
+  &__title {
+    font-size: 4rem;
+    text-align: center;
+  }
+  &__p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}

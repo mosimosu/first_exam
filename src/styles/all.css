@@ -1,0 +1,402 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.container {
+  /* 設計稿的網格系統中，一個列寬是 60px */
+  /* 列與列之間的間隔寬度為 20px */
+  /* PC版本 */
+  /* max-width 960px = 60px*12 + 20px*11 + 10px*2(左右兩邊推gutter 的一半)*/
+  max-width: 960px; /* 共 960px */
+  margin: 0 auto; /*垂直置中*/
+  padding: 0 10px; /*gutter的一半= 20/2 =10 px*/
+  /* Pad 版*/
+}
+
+.landing-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.landing-section__background-img {
+  width: 150%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 1024px) {
+  .landing-section__background-img {
+    width: 100%;
+  }
+}
+.landing-section__textarea {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  position: absolute;
+  z-index: 10;
+  color: white;
+}
+.landing-section__textarea-p {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+.landing-section__textarea-title {
+  font-size: 5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.landing-section__plateform {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.about-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.5rem;
+}
+.about-section__photo {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+.about-section__photo + div {
+  margin-top: 1.25rem;
+}
+.about-section__title {
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+.about-section__p {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.about-section__textarea {
+  margin-top: 1.25rem;
+}
+.about-section__item {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.75rem;
+  align-content: center;
+  justify-items: baseline;
+  align-items: baseline;
+}
+
+.dot {
+  width: 22px;
+  height: 22px;
+  background-color: #891818;
+  border-radius: 9999px;
+  margin: auto 1rem;
+}
+
+.intro-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3.5rem;
+  background-color: black;
+  color: white;
+}
+.intro-section__textarea {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+.intro-section__textarea-title {
+  font-size: 4rem;
+}
+.intro-section__textarea-subtitle {
+  margin-top: 0.75rem;
+  font-size: 1.5rem;
+}
+.intro-section__textarea-subtitle ~ div {
+  margin-top: 2rem;
+}
+.intro-section__textarea-p {
+  font-size: 1.25rem;
+}
+.intro-section__images {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4.25rem;
+  margin-bottom: 10rem;
+}
+.intro-section__images > img {
+  width: 792px;
+  height: 416px;
+}
+@media (max-width: 1024px) {
+  .intro-section__images > img {
+    width: 588px;
+  }
+}
+.intro-section__images > div {
+  display: flex;
+  margin-top: 2.5rem;
+  gap: 1.5rem;
+}
+@media (max-width: 1024px) {
+  .intro-section__images > div {
+    flex-direction: column;
+  }
+}
+
+.works-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.works-section__textarea {
+  margin-top: 3.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+}
+.works-section__textarea-title {
+  font-size: 4rem;
+}
+.works-section__textarea-title + p {
+  margin-top: 1.5rem;
+}
+.works-section__textarea-title + p + p {
+  margin-bottom: 3.5rem;
+}
+.works-section__textarea-p {
+  font-size: 1.25rem;
+}
+.works-section__cards {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  display: grid;
+  grid-template-areas: "one one two two three three" "four four four five five five" "six six seven seven eight eight";
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.25rem;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .works-section__cards {
+    grid-template-areas: "one" "two" "three" "four" "five" "six" "seven" "eight";
+  }
+}
+.works-section__cards > li:nth-child(1) {
+  grid-area: one;
+}
+.works-section__cards > li:nth-child(2) {
+  grid-area: two;
+}
+.works-section__cards > li:nth-child(3) {
+  grid-area: three;
+}
+.works-section__cards > li:nth-child(4) {
+  grid-area: four;
+  margin: 2rem auto;
+}
+.works-section__cards > li:nth-child(5) {
+  grid-area: five;
+  margin: 2rem auto;
+}
+.works-section__cards > li:nth-child(6) {
+  grid-area: six;
+}
+.works-section__cards > li:nth-child(7) {
+  grid-area: seven;
+}
+.works-section__cards > li:nth-child(8) {
+  grid-area: eight;
+}
+
+.contact-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  background-color: black;
+  color: white;
+  margin-top: 9rem;
+}
+.contact-section > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 4rem auto;
+}
+.contact-section__title {
+  font-size: 4rem;
+  text-align: center;
+}
+.contact-section__p {
+  font-size: 1.5rem;
+  text-align: center;
+}/*# sourceMappingURL=all.css.map */

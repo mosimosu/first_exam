@@ -9,9 +9,9 @@
     background-size: cover;
     background-position: center;
     @include mobile {
-      width: 150%;
+      width: 200%;
       position: relative;
-      right: 30%;
+      right: 50%;
     }
   }
   &__textarea {
@@ -44,6 +44,7 @@
   margin-top: 3.5rem;
   &__photo {
     margin-top: 2.5rem;
+    width: 100%;
     & + div {
       margin-top: 1.25rem;
     }

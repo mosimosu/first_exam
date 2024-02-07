@@ -168,9 +168,9 @@ table {
 }
 @media (max-width: 1280px) {
   .landing-section__background-img {
-    width: 150%;
+    width: 200%;
     position: relative;
-    right: 30%;
+    right: 50%;
   }
 }
 .landing-section__textarea {
@@ -209,8 +209,7 @@ table {
 }
 .about-section__photo {
   margin-top: 2.5rem;
-  position: relative;
-  left: 3%;
+  width: 100%;
 }
 .about-section__photo + div {
   margin-top: 1.25rem;

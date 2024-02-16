@@ -1,26 +1,23 @@
 .landing-section {
   @include section;
-  position: relative;
-  & > div {
-    overflow: hidden;
-  }
-  &__background-img {
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    @include mobile {
-      width: 200%;
-      position: relative;
-      right: 50%;
-    }
+  height: 100vh;
+  background-image: url(../pictures/banner.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__container {
+    @include container;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
   }
   &__textarea {
     display: flex;
     justify-content: center;
     align-items: start;
     flex-direction: column;
-    position: absolute;
-    z-index: 10;
     color: white;
 
     &-p {
@@ -42,9 +39,15 @@
 .about-section {
   @include section;
   margin-top: 3.5rem;
+
+  &__container {
+    text-align: center;
+    @include container;
+  }
   &__photo {
+    margin: 0 auto;
     margin-top: 2.5rem;
-    width: 100%;
+    width: 384px;
     & + div {
       margin-top: 1.25rem;
     }
@@ -65,10 +68,10 @@
   &__item {
     display: flex;
     justify-content: center;
-    margin-top: 1.75rem;
     align-content: center;
     justify-items: baseline;
     align-items: baseline;
+    margin-top: 1.75rem;
   }
 }
 
@@ -86,6 +89,10 @@
   margin-top: 3.5rem;
   background-color: black;
   color: white;
+
+  &__container {
+    @include container;
+  }
   &__textarea {
     margin-top: 3.5rem;
     display: flex;
@@ -108,32 +115,16 @@
   }
   &__images {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5rem 1.5rem;
     margin-top: 4.25rem;
     margin-bottom: 10rem;
-    & > img {
-      width: 792px;
-      height: 416px;
-      @include mobile {
-        width: 384px;
-        height: auto;
-      }
-    }
-    & > div {
-      display: flex;
-      margin-top: 2.5rem;
+    @include tablet {
       gap: 1.5rem;
-      @include mobile {
-        flex-direction: column;
-      }
-      & > img {
-        @include mobile {
-          width: 384px;
-          height: auto;
-        }
-      }
+    }
+    & > img {
+      max-width: 100%;
     }
   }
 }
@@ -141,6 +132,9 @@
 .works-section {
   @include section;
   flex-direction: column;
+  &__container {
+    @include container;
+  }
   &__textarea {
     margin-top: 3.5rem;
     @include roboto-medium-italic;
@@ -167,7 +161,12 @@
     gap: 1.5rem;
     font-size: 1.25rem;
     text-align: center;
-    @include mobile {
+
+    @media screen and (max-width: 1240px) {
+      grid-template-areas: "one one two two" ".  three three ." " . four four ." ". five five ." " six six seven seven" ". eight eight .";
+    }
+
+    @include tablet {
       grid-template-areas: "one" "two" "three" "four" "five" "six" "seven" "eight";
     }
 
@@ -215,6 +214,9 @@
   @include roboto-medium-italic;
   background-color: black;
   color: white;
+  &__container {
+    @include container;
+  }
   margin-top: 9rem;
   & > div {
     display: flex;
@@ -227,8 +229,11 @@
     font-size: 4rem;
     text-align: center;
   }
-  &__p {
+
+  & div > a {
     font-size: 1.5rem;
     text-align: center;
+    text-decoration: none;
+    color: inherit;
   }
 }

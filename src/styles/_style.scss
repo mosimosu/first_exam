@@ -41,13 +41,14 @@
   margin-top: 3.5rem;
 
   &__container {
-    text-align: center;
     @include container;
+    text-align: center;
   }
   &__photo {
     margin: 0 auto;
     margin-top: 2.5rem;
-    width: 384px;
+    // width: 384px;
+    width: 100%;
     & + div {
       margin-top: 1.25rem;
     }
@@ -183,7 +184,7 @@
       grid-area: four;
       margin: 2rem auto;
       & > img {
-        @include mobile {
+        @include tablet {
           width: 384px;
         }
       }
@@ -192,7 +193,7 @@
       grid-area: five;
       margin: 2rem auto;
       & > img {
-        @include mobile {
+        @include tablet {
           width: 384px;
         }
       }

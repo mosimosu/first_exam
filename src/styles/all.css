@@ -200,13 +200,13 @@ table {
   margin-top: 3.5rem;
 }
 .about-section__container {
-  text-align: center;
   width: 70%;
+  text-align: center;
 }
 .about-section__photo {
   margin: 0 auto;
   margin-top: 2.5rem;
-  width: 384px;
+  width: 100%;
 }
 .about-section__photo + div {
   margin-top: 1.25rem;
@@ -359,7 +359,7 @@ table {
   grid-area: four;
   margin: 2rem auto;
 }
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .works-section__cards > li:nth-child(4) > img {
     width: 384px;
   }
@@ -368,7 +368,7 @@ table {
   grid-area: five;
   margin: 2rem auto;
 }
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .works-section__cards > li:nth-child(5) > img {
     width: 384px;
   }
